@@ -6,6 +6,7 @@ foreach ($ip in $ipaddress.AddressList) {
     }
 }
 
+Set-Alias -Name firefox -Value "C:\Program Files\Mozilla Firefox\firefox.exe" -Description "Launches Firefox" -Force -ErrorAction SilentlyContinue
 $dets = @"
 
 +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
