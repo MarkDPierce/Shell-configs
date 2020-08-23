@@ -21,6 +21,13 @@ Modules required
 - [oh-my-posh]()
     - `Install-Module oh-my-post`
 
+Drop `underwear.psm1`in    
+
+    - Windows
+        - C:\Users\markp\Documents\WindowsPowershell\Modules\oh-my-posh\2.0.465\Themes\
+    - Mac
+        - /Users/mpierce/.local/share/powershell/Modules/oh-my-posh/2.0.465/Them
+
 ## Terminal
 Terminal configuration section
 
