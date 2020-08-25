@@ -1,12 +1,24 @@
 $ipaddress = [System.Net.DNS]::GetHostByName($null)
+
 foreach ($ip in $ipaddress.AddressList) {
     if ($ip.AddressFamily -eq 'InterNetwork') {
         $ModernConsole_IPv4Address = $ip.IPAddressToString
         break
     }
 }
+function explorer {
+    explorer.exe .
+}
 
+function stree {
+	$SourceTreeFolder =  get-childitem ("${env:LOCALAPPDATA}" + "\SourceTree\app*") | Select-Object -first 1
+	& $SourceTreeFolder/SourceTree.exe -f .
+}
+
+set-alias unzip expand-archive
 Set-Alias -Name firefox -Value "C:\Program Files\Mozilla Firefox\firefox.exe" -Description "Launches Firefox" -Force -ErrorAction SilentlyContinue
+Set-Alias -Name VSIE -Value "C:\Users\markp\OneDrive\LoginVSI\ScriptEditor\ScriptEditor.exe" -Description "Launches LoginVSI Script Editor" -Force
+
 $dets = @"
 
 +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+
